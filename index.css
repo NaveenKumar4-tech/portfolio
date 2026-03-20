@@ -43,8 +43,8 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-
+    z-index:999;
+    position: fixed;
 }   
 
 /* -------------------------------subnav =---------------------------- */
@@ -114,18 +114,20 @@ a:hover::after{
     opacity:1
 }
 
+.fa-xmark{
+    display: none;
+}
 /* ------------------------------name style-------------------------------- */
 
 .name{
     font-size: 40px;
     color:white;
-    /* background-color: aquamarine; */
+    margin-top: 100px;
     display: flex;
     justify-content: center;
       text-align: center;
     gap:10px;
      z-index: 1;
-    /* padding:50px 10px 10px  */
 }
 
 .wrd2{
@@ -224,10 +226,6 @@ marquee h2{
 
 } 
 
-marquee img{
-    height:70px;
-    width:100px
-}
 marquee{
     color: white;
     margin-top:20px
@@ -554,7 +552,7 @@ main:hover h2>.fa-solid{
     border-bottom-left-radius:130px;
     background-color: rgb(82, 82, 82);
     position: absolute;
-    z-index:999;
+    z-index:500;
     padding: 20px;
 }
 
@@ -817,7 +815,7 @@ td,tr,table{
 @media only screen and (min-width:600px) and (max-width:700px){
    
     .subnav{
-        gap:20px
+        gap:10px
     }
     .word3{
         font-size: 25px;
@@ -837,7 +835,7 @@ td,tr,table{
         display: block;
         padding-left: 20px;
     }
-    
+
 .subnav{
     background-color: #191818de;
     position:absolute;
@@ -882,6 +880,12 @@ td,tr,table{
    .contact>div{
         width:100%
    }
+      .fa-xmark{
+    display: block;
+    position: absolute;
+    top:10px;
+    right:10px
+ }
 }
 
 @media only screen and (max-width:450px){
@@ -903,14 +907,13 @@ td,tr,table{
     .word3~h3{
         width:100%;
         text-align: left;
-
     }
     .subnav{
     background-color: #3d4546de;
     position: fixed;
     left:-100%;
     top:80px;
-    height:80vh;
+    min-height:80vh;
     width:90%;;
     flex-direction: column;
     align-items:center;
@@ -928,6 +931,12 @@ td,tr,table{
         display: block;
     }
     
+   .fa-xmark{
+    display: block;
+    position: absolute;
+    top:10px;
+    right:10px
+    }
     .home{
         padding:20px
     }
@@ -947,8 +956,9 @@ td,tr,table{
 
 
     .icons{
-       font-size: 12px;
+        font-size: 20px;
         padding: 45px 5px;
+        top:200px
     }
     
     .ar1{
